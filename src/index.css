@@ -1,13 +1,162 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: linear-gradient(120deg, #f6d365, #fda085);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  margin-top: 10px;
+}
+
+/* Styles for the root element where React will render content */
+#root {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles - making it more substantial */
+form {
+  background-color: white;
+  padding: 40px; /* Increased padding for more space inside the form */
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Increased form width */
+  margin: 0 auto; /* Centering the form */
+  text-align: center;
+}
+
+form input {
+  width: 100%;
+  padding: 15px; /* Increased padding for input fields */
+  margin: 1rem 0;
+  border-radius: 8px; /* Softer border */
+  border: 1px solid #dcdcdc;
+  background-color: #f9fafb;
+  font-size: 1.1rem; /* Increased font size */
+  transition: all 0.3s ease;
+}
+
+form input:focus {
+  border-color: #5dade2;
+  background-color: white;
+}
+
+form button {
+  width: 100%;
+  padding: 15px; /* Increased padding for the button */
+  background-color: #5dade2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #3498db;
+}
+
+/* Styles for navigation buttons */
+nav {
+  background-color: #5dade2;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: #f1c40f;
+}
+
+/* Styles for Register and Login buttons */
+.button {
+  padding: 10px 20px; /* Padding for buttons */
+  background-color: #5dade2; /* Base color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  margin-left: 5px; /* Space between buttons */
+}
+
+.button:hover {
+  background-color: #3498db; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.button:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+/* Optional: Style for disabled button state */
+.button:disabled {
+  background-color: #dcdcdc; /* Greyed out color */
+  cursor: not-allowed; /* Not-allowed cursor */
+}
+
+footer {
+  background-color: #34495e;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+footer .footer-links a {
+  color: #f1c40f;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer .footer-links a:hover {
+  color: #ecf0f1;
+}
+
+/* Smooth hover transitions */
+a, button, input {
+  transition: all 0.3s ease;
 }
